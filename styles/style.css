@@ -1,14 +1,21 @@
 body {
   box-sizing: border-box;
-  color: white;
-  background-color: #131314;
-  font-weight: 300;
 }
 
 body,
 address {
   font-style: italic;
   font-family: "Roboto Condensed";
+  font-weight: 300;
+  font-size: clamp(0.75rem, 1vw, 1.4rem);
+}
+
+.container {
+  color: white;
+  background-color: #131314;
+  width: min(100vw, 1296px);
+  margin-inline: auto;
+  overflow-x: hidden;
 }
 
 img {
@@ -38,13 +45,16 @@ a:not(.logo):focus, a:not(.logo):hover,
   width: 10em;
   text-align: center;
   white-space: normal;
-  font-size: 1rem;
   font-weight: 700;
   font-style: normal;
 }
 
 .logo-sm {
-  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: clamp(0.75rem, 1vw, 1.75rem);
+}
+
+.logo-lg {
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .row {
@@ -52,14 +62,15 @@ a:not(.logo):focus, a:not(.logo):hover,
 }
 
 nav {
-  padding: 2vw;
+  padding: 1vw;
 }
 
-nav, nav ul {
+nav,
+nav ul {
   display: flex;
 }
 
-nav .logo {
+nav .logo-lg {
   margin-right: auto;
 }
 
@@ -76,19 +87,28 @@ nav ul {
 footer {
   background-color: white;
   color: #131314;
-  padding: 3vw;
+  padding: 4vh 3vh;
 }
 
-footer h3,
+footer,
+address {
+  font-size: clamp(0.625rem, 1.5vmin, 0.85rem);
+}
+
+footer .row {
+  justify-content: space-evenly;
+}
+
+footer h4,
 footer .logo-sm {
   margin-block: 0;
 }
 
-.footer-info {
+.footer--info {
   margin-left: 5vw;
 }
 
-.footer-info > div {
+.footer--info > div {
   margin-bottom: 1.5em;
 }
 
@@ -98,14 +118,44 @@ footer p {
   margin-block: 0.5em;
 }
 
+@media screen and (min-width: 768px) {
+  .footer--logo .logo-sm {
+    margin-inline: auto;
+  }
+  .footer--info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+  .footer--info > div {
+    margin-left: 5%;
+  }
+}
+@media screen and (min-width: 996px) {
+  footer .row > div {
+    flex-grow: 1;
+  }
+  .footer--info {
+    flex-wrap: nowrap;
+    padding-inline: 10%;
+  }
+}
+.homepage-img {
+  max-width: 100vw;
+}
+
 .homepage-text {
   text-align: center;
-  margin-block: 5vh;
+  margin-block: 3vmax;
+  padding: 2em;
 }
 
 @media (min-width: 900px) {
   .homepage-text {
+    font-size: 1.4rem;
+    line-height: 1.75;
     text-align: left;
-    margin-left: 55vw;
+    margin-left: 40%;
   }
 }/*# sourceMappingURL=style.css.map */
