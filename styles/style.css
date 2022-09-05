@@ -1,12 +1,111 @@
 body {
-  font-family: "Roboto Condensed Light Italic";
+  box-sizing: border-box;
+  color: white;
+  background-color: #131314;
+  font-weight: 300;
 }
 
-.logo {
-  font-family: "Telford Hollow";
+body,
+address {
+  font-style: italic;
+  font-family: "Roboto Condensed";
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:not(.logo),
+.navbar-toggler {
+  transition: font-weight 350ms ease-in;
+}
+a:not(.logo):focus, a:not(.logo):hover,
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  font-weight: 700;
+}
+
+.logo-lg,
+.logo-sm {
+  display: block;
+  font-family: "Telford Hollow";
+  width: 10em;
+  text-align: center;
+  white-space: normal;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.logo-sm {
+  font-size: clamp(1rem, 2vw, 3rem);
+}
+
+.row {
+  display: flex;
+}
+
+nav {
+  padding: 2vw;
+}
+
+nav, nav ul {
+  display: flex;
+}
+
+nav .logo {
+  margin-right: auto;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-inline: 2rem;
+}
+
+footer {
+  background-color: white;
+  color: #131314;
+  padding: 3vw;
+}
+
+footer h3,
+footer .logo-sm {
+  margin-block: 0;
+}
+
+.footer-info {
+  margin-left: 5vw;
+}
+
+.footer-info > div {
+  margin-bottom: 1.5em;
+}
+
+footer a,
+footer p {
+  display: block;
+  margin-block: 0.5em;
+}
+
+.homepage-text {
+  text-align: center;
+  margin-block: 5vh;
+}
+
+@media (min-width: 900px) {
+  .homepage-text {
+    text-align: left;
+    margin-left: 55vw;
+  }
 }/*# sourceMappingURL=style.css.map */
