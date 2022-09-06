@@ -3,7 +3,8 @@ body {
 }
 
 body,
-address {
+address,
+.contact-address {
   font-style: italic;
   font-family: "Roboto Condensed";
   font-weight: 300;
@@ -16,6 +17,24 @@ address {
   width: min(100vw, 1296px);
   margin-inline: auto;
   overflow-x: hidden;
+}
+
+.content-container {
+  padding-inline: 14vmin;
+  padding-bottom: 20vmin;
+}
+@media screen and (min-width: 768px) {
+  .content-container .title {
+    margin-left: 15vw;
+  }
+  .content-container .content {
+    margin-left: calc(15vw + 4em);
+  }
+}
+
+.title {
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 img {
@@ -62,7 +81,7 @@ a:not(.logo):focus, a:not(.logo):hover,
 }
 
 nav {
-  padding: 1vw;
+  padding: 3vmin;
 }
 
 nav,
@@ -157,5 +176,22 @@ footer p {
     line-height: 1.75;
     text-align: left;
     margin-left: 40%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cars-main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .cars-main h1 {
+    padding: 0 2em;
+  }
+  .cars-main figure {
+    max-width: 50%;
+  }
+  .cars-main figcaption {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

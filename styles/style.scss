@@ -1,15 +1,16 @@
 @import "variables";
 
-:root {
-    $font-size-base: 1rem;
-}
+$font-size-base: 1rem;
+$padding-content-inline: 14vmin;
+$padding-content-bottom: 20vmin;
 
 body {
   box-sizing: border-box;
 }
 
 body,
-address {
+address,
+.contact-address {
   font-style: italic;
   font-family: "Roboto Condensed";
   font-weight: 300;
@@ -22,6 +23,26 @@ address {
   width: min(100vw, 1296px);
   margin-inline: auto;
   overflow-x: hidden;
+}
+
+.content-container {
+  padding-inline: $padding-content-inline;
+  padding-bottom: $padding-content-bottom;
+
+  @media screen and (min-width: 768px) {
+    .title {
+      margin-left: 15vw;
+    }
+
+    .content {
+      margin-left: calc(15vw + 4em);
+    }
+  }
+}
+
+.title {
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 img {
@@ -70,7 +91,7 @@ a:not(.logo),
 // --- header ---
 
 nav {
-  padding: 1vw;
+  padding: 3vmin;
 }
 
 nav,
@@ -100,12 +121,12 @@ footer {
 
 footer,
 address {
-    font-size: clamp(0.625rem,1.5vmin,0.85rem)
+  font-size: clamp(0.625rem, 1.5vmin, 0.85rem);
 }
 
 footer .row {
-    justify-content: space-evenly;
-  }
+  justify-content: space-evenly;
+}
 
 footer h4,
 footer .logo-sm {
@@ -127,7 +148,6 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
-
   .footer--logo .logo-sm {
     margin-inline: auto;
   }
@@ -172,6 +192,28 @@ footer p {
     line-height: 1.75;
     text-align: left;
     margin-left: 40%;
+  }
+}
 
+// --- cars ---
+
+.cars-main {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+
+    h1 {
+      padding: 0 2em;
+    }
+
+    figure {
+      max-width: 50%;
+    }
+
+    figcaption {
+      display: none;
+    }
   }
 }
