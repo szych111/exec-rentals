@@ -1,4 +1,5 @@
 @import "variables";
+@import "nav";
 
 $font-size-base: 1rem;
 $padding-content-inline: 14vmin;
@@ -89,28 +90,27 @@ a:not(.logo),
 }
 
 // --- header ---
+// nav {
+//   padding: 3vmin;
+// }
 
-nav {
-  padding: 3vmin;
-}
+// nav,
+// nav ul {
+//   display: flex;
+// }
 
-nav,
-nav ul {
-  display: flex;
-}
+// nav .logo-lg {
+//   margin-right: auto;
+// }
 
-nav .logo-lg {
-  margin-right: auto;
-}
-
-nav ul {
-  list-style: none;
-}
-.nav-link {
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-inline: 2rem;
-}
+// nav ul {
+//   list-style: none;
+// }
+// .nav-link {
+//   text-transform: uppercase;
+//   font-weight: 400;
+//   margin-inline: 2rem;
+// }
 
 // --- footer ---
 footer {
